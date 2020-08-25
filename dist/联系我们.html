@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #allmap {
+            height: 336px;
+            width: 995px;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=XT6AkOmXzfzYHEN767UGmWGVGlMOPi1n"></script>
+    <script type="text/javascript" src="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <title>带检索功能的信息窗口</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo float_left">
+            <img src="./images/logo_02.jpg" alt="">
+        </h2>
+        <ul class="nav-con float_left">
+            <li class="float_left"><a href="./首页.html" target="_blank">首页</a></li>
+            <li class="float_left"><a href="./关于我们.html" target="_blank">关于我们</a></li>
+            <li class="float_left"><a href="./产品介绍.html" target="_blank">产品介绍</a></li>
+            <li class="float_left"><a href="./团队介绍.html" target="_blank">我们团队</a></li>
+            <li class="float_left actives"><a href="./联系我们.html" target="_blank">联系我们</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="course-banner">
+            <img src="./images/contactbanner_02.png" alt="">
+            <div class="fix-box">
+                <p><span>C</span>ontact</p>
+                <p>团队介绍 <span>us</span></p>
+            </div>
+        </div>
+        <div class="course-con clear_fix">
+            <div class="tit-text">
+                <div class="wrap_left float_left">
+                    <h3>联系我们</h3>
+                    <p>company profile</p>
+                    <i class="fixed"></i>
+                </div>
+                <p class="wrap_right float_right">
+                    <span><a href="">当前位置></a></span>
+                    <span><a href="">首页></a></span>
+                    <span><a href="">联系我们></a></span>
+                </p>
+            </div>
+            <div id="allmap" class="list-bg">
+                <img src="./images/maps_03.png" alt="">
+            </div>
+            <div class="list-b clear_fix">
+                <dl class="float_left">
+                    <dt class="float_left"><img src="./images/dlbg_06.jpg" alt=""></dt>
+                    <dd class="float_left">
+                        <h3>
+                            <a href="">咨询热线</a>
+                        </h3>
+                        <p><a href="">Information Hotline</a></p>
+                        <p><a href="">重庆：+86 023-867-7848</a></p>
+                        <p><a href="">(09：30~18：30 北京时间)</a></p>
+                    </dd>
+                </dl>
+                <dl class="float_left">
+                    <dt class="float_left"><img src="./images/dlbg1_06.jpg" alt=""></dt>
+                    <dd class="float_left">
+                        <h3>
+                            <a href="">公司地址</a>
+                        </h3>
+                        <p><a href="">Company address</a></p>
+                        <p><a href="">地址：重庆大坪龙湖时代天街3号写字楼2407室</a></p>
+                        <p><a href="">(09：30~18：30 北京时间)</a></p>
+                    </dd>
+                </dl>
+                <dl class="float_left">
+                    <dt class="float_left"><img src="./images/dlbg1_10.jpg" alt=""></dt>
+                    <dd class="float_left">
+                        <h3>
+                            <a href="">公司邮箱</a>
+                        </h3>
+                        <p><a href="">E-mail</a></p>
+                        <p><a href="">邮箱：info@haitouglobal.com</a></p>
+                        <p><a href="">(09：30~18：30 北京时间)</a></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-con">
+            <p class="float_left">Copyright © 重庆duzu有限公司 | duzu备案号 33010602001878 号 版权所有：重庆戈登有限公司</p>
+            <h5 class="float_left"><img src="./images/footerbg_11.jpg" alt=""></h5>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map('allmap');
+        var poi = new BMap.Point(106.491281, 29.537841);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+            '<img src="./images/ducimg_03.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+            '地址：重庆市大西洋国际HTML52003<br/>电话：(010)59928888<br/>简介：大西洋国际大厦位于重庆市九龙坡区石桥铺地铁站附近' +
+            '</div>';
+
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title: "百度大厦",      //标题
+            width: 290,             //宽度
+            height: 105,              //高度
+            panel: "panel",         //检索结果面板
+            enableAutoPan: true,     //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH,   //周边检索
+                BMAPLIB_TAB_TO_HERE,  //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        // marker.enableDragging(); //marker可拖拽
+        marker.addEventListener("click", function (e) {
+            searchInfoWindow.open(marker);
+        })
+        map.addOverlay(marker); //在地图中添加marker
+        //样式1
+        var searchInfoWindow1 = new BMapLib.SearchInfoWindow(map, "信息框1内容", {
+            title: "信息框1", //标题
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_FROM_HERE, //从这里出发
+                BMAPLIB_TAB_SEARCH   //周边检索
+            ]
+        });
+        function openInfoWindow1() {
+            searchInfoWindow1.open(new BMap.Point(116.319852, 40.057031));
+        }
+        //样式2
+        var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, "信息框2内容", {
+            title: "信息框2", //标题
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH   //周边检索
+            ]
+        });
+        function openInfoWindow2() {
+            searchInfoWindow2.open(new BMap.Point(116.324852, 40.057031));
+        }
+        //样式3
+        var searchInfoWindow3 = new BMapLib.SearchInfoWindow(map, "信息框3内容", {
+            title: "信息框3", //标题
+            width: 290, //宽度
+            height: 40, //高度
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+            ]
+        });
+        function openInfoWindow3() {
+            searchInfoWindow3.open(new BMap.Point(106.491281, 29.537841));
+        }
+    </script>
+</body>
+</html>

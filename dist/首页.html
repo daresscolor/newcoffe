@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #allmap {
+            height: 344px;
+            width: 664px;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=XT6AkOmXzfzYHEN767UGmWGVGlMOPi1n"></script>
+    <script type="text/javascript" src="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="//api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <title>带检索功能的信息窗口</title>
+
+</head>
+
+<body>
+    <header>
+        <h2 class="logo float_left">
+            <img src="./images/logo_02.jpg" alt="">
+        </h2>
+        <ul class="nav-con float_left">
+            <li class="float_left actives"><a href="">首页</a></li>
+            <li class="float_left"><a href="./关于我们.html" target="_blank">关于我们</a></li>
+            <li class="float_left"><a href="./产品介绍.html" target="_blank">产品介绍</a></li>
+            <li class="float_left"><a href="./团队介绍.html" target="_blank">我们团队</a></li>
+            <li class="float_left"><a href="./联系我们.html" target="_blank">联系我们</a></li>
+        </ul>
+    </header>
+    <div class="banner">
+        <div class="box">
+            <img src="./images/banner.bg_02.gif" alt="">
+            <img src="./images/timg2_01.png" alt="">
+            <img src="./images/timg1_01.png" alt="">
+        </div>
+        <button class="b1"><<</button> 
+        <button class="b2">>></button>
+        <ul>
+            <li class="active" dy="0"></li>
+            <li dy="1"></li>
+            <li dy="2"></li>
+        </ul>
+    </div>
+    <div class="about clear_fix">
+        <h2 class="h-tit">关于我们</h2>
+        <p class="p-text">about us</p>
+        <div class="icon-img">
+            <img src="./images/kafei_03.png" alt="">
+        </div>
+        <dl class="about-con">
+            <dt class="float_left">
+                <div class="fixed_box">
+                    <img src="./images/flxed_box_03.jpg" alt="">
+                </div>
+            </dt>
+            <dd class="float_left">
+                <h2>公司简介</h2>
+                <li class="line_box"></li>
+                <div class="p_box">
+                    <p>二十世纪三十年代，巴西咖啡豆生产过剩， 剩余的咖啡豆只能当燃料消耗，非常可惜。当巴西政府向雀巢公司寻求咖啡豆过剩的解决方法的时候
+                        ，并没有意识到这最终成就了一个历久弥醇的伟大的咖啡品牌。1930年，巴西咖啡连续经历了几次大丰收，短期内难以完全售，便向雀巢求助，寻求令咖啡不失香醇的长
+                        期保存方式。咖啡权威——马克思•莫根特尔(Max
+                        Morgenthaler)立刻同他的研究队伍着手研究，试图制造一种既可以较好保存咖啡芳香又易溶于热水的"固体咖啡"。经过在雀巢瑞士实验室长达七年的不懈努力，30年代末，雀巢向市场推出速溶咖啡，“雀巢咖啡”品牌创立。
+                    </p>
+                    <p>1988年，雀巢通过考察确定云南适宜种植咖啡，决定支持云南省的咖啡种植。随后于1992年在云南思茅地区成立咖啡农艺服务部，帮助当地发展咖啡种植业。1997年，雀巢公司在西双版纳创建试验示范农场，从零开始，让农民得到方方面面的实际培训，大大促进了当地小粒种咖啡豆的发展，并使一个产量低、质量次的咖啡豆产地发展成一个产量高、质量优且已引起全球咖啡界关注的咖啡豆产地。雀巢不仅让农民通过种植咖啡获得了稳定的收入,当地农民通过向雀巢了解国际现货市场价格甚至自己上网查询交易网站的价格，学会根据波动分析销售咖啡的时机。
+                    </p>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <div id="bg">
+        <div class="bg-box">
+            <img src="./images/lunbo_02.jpg" alt="">
+            <p>浓香咖啡 让你享受每一个美好的午后时光</p>
+        </div>
+    </div>
+    <div class="product clear_fix">
+        <h2 class="h-tit">产品介绍</h2>
+        <p class="p-text">about us</p>
+        <div class="icon-img">
+            <img src="./images/kafei_03.png" alt="">
+        </div>
+        <div class="product-con">
+            <div class="con_box">
+                <dl class="float_left">
+                    <dt>
+                        <img src="./images/ducimg_03.jpg" alt="">
+                        <div class="opa_box">
+                            <img src="./images/fangdajing_03.png" alt="">
+                        </div>
+                    </dt>
+                    <dd>
+                        <h3><a href="">拿铁咖啡</a></h3>
+                        <p><a href="">拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料，带来让人难以忘怀的味道</a></p>
+                        <em></em>
+                    </dd>
+                </dl>
+                <dl class="float_left">
+                    <dt>
+                        <img src="./images/ducimg_03.jpg" alt="">
+                        <div class="opa_box">
+                            <img src="./images/fangdajing_03.png" alt="">
+                        </div>
+                    </dt>
+                    <dd>
+                        <h3><a href="">卡布基诺</a></h3>
+                        <p><a href="">卡布奇诺是一种加入以同量的意大利特浓咖啡和蒸汽泡沫牛奶相混合的意大利咖啡。象卡布奇诺教会的修士头巾一样，咖啡因此得名</a></p>
+                        <em></em>
+                    </dd>
+                </dl>
+                <dl class="float_left">
+                    <dt>
+                        <img src="./images/product_03.jpg" alt="">
+                        <div class="opa_box">
+                            <img src="./images/fangdajing_03.png" alt="">
+                        </div>
+                    </dt>
+                    <dd>
+                        <h3><a href="">摩卡咖啡</a></h3>
+                        <p><a href="">摩卡咖啡(CafeMocha)是一种最古老的咖啡，其历史要追溯到咖啡的起源。它是浓缩咖啡、鲜奶油和牛奶混合而成，摩卡得名于有名的摩卡港</a></p>
+                        <em></em>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="team clear_fix">
+        <h2 class="h-tit">产品介绍</h2>
+        <p class="p-text">about us</p>
+        <div class="icon-img">
+            <img src="./images/kafei_03.png" alt="">
+        </div>
+        <div class="team-box">
+            <div class="con_box">
+                <dl class="team-con float_left">
+                    <dt>
+                        <img src="./images/team_03.jpg" alt="">
+                    </dt>
+                    <dd>
+                        <h4>贾斯汀比伯</h4>
+                        <p>Charlie Puth</p>
+                        <div class="position—box">
+                            <h5>贾斯汀·比伯</h4>
+                                <p>贾斯汀出生于1994年3月1日的加拿大安大略省伦敦的圣若...</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="team-con float_left">
+                    <dt>
+                        <img src="./images/teamimg_03.jpg" alt="">
+                    </dt>
+                    <dd>
+                        <h4>查理·普斯</h4>
+                        <p>Charlie Puth</p>
+                        <div class="position—box">
+                            <h5>贾斯汀比伯</h4>
+                                <p>贾斯汀出生于1994年3月1日的加拿大安大略省伦敦的圣若...</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="team-con float_left">
+                    <dt>
+                        <img src="./images/teamimg_05.jpg" alt="">
+                    </dt>
+                    <dd>
+                        <h4>艾薇儿·拉维尼</h4>
+                        <p>Avril Lavigne</p>
+                        <div class="position—box">
+                            <h5>贾斯汀比伯</h4>
+                                <p>贾斯汀出生于1994年3月1日的加拿大安大略省伦敦的圣若...</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="team-con float_left">
+                    <dt>
+                        <img src="./images/teamimg_07.jpg" alt="">
+                    </dt>
+                    <dd>
+                        <h4>泰勒·斯威夫特</h4>
+                        <p>Taylor Swift</p>
+                        <div class="position—box">
+                            <h5>贾斯汀比伯</h4>
+                                <p>贾斯汀出生于1994年3月1日的加拿大安大略省伦敦的圣若...</p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="contact clear_fix">
+        <h2 class="h-tit">产品介绍</h2>
+        <p class="p-text">about us</p>
+        <div class="icon-img">
+            <img src="./images/kafei_03.png" alt="">
+        </div>
+        <div class="contact-con">
+            <div id="allmap" class="float_left">
+            </div>
+            <div class="contact_text float_left">
+                <dl>
+                    <dt class="float_left"><img src="./images/dlbg_06.jpg" alt=""></dt>
+                    <dd class="float_left">
+                        <h3><a href="">咨询热线</a></h3>
+                        <p><a href="">Information Hotline</a></p>
+                        <p><a href="">重庆：+86 023-867-7848</a></p>
+                        <p><a href="">(09：30~18：30 北京时间)</a></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="float_left"><img src="./images/dlbg1_06.jpg" alt=""></dt>
+                    <dd class="float_left">
+                        <h3><a href="">咨询热线</a></h3>
+                        <p><a href="">Information Hotline</a></p>
+                        <p><a href="">重庆：+86 023-867-7848</a></p>
+                        <p><a href="">(09：30~18：30 北京时间)</a></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class="float_left"><img src="./images/dlbg1_10.jpg" alt=""></dt>
+                    <dd class="float_left">
+                        <h3><a href="">咨询热线</a></h3>
+                        <p><a href="">Information Hotline</a></p>
+                        <p><a href="">重庆：+86 023-867-7848</a></p>
+                        <p><a href="">(09：30~18：30 北京时间)</a></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-con clear_fix">
+            <p class="float_left">Copyright © 重庆duzu有限公司 | duzu备案号 33010602001878 号 版权所有：重庆戈登有限公司</p>
+            <h5 class="float_left"><img src="./images/footerbg_11.jpg" alt=""></h5>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map('allmap');
+        var poi = new BMap.Point(106.491281, 29.537841);
+        map.centerAndZoom(poi, 16);
+        map.enableScrollWheelZoom();
+
+        var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+            '<img src="./images/ducimg_03.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+            '地址：重庆市大西洋国际HTML52003<br/>电话：(010)59928888<br/>简介：大西洋国际大厦位于重庆市九龙坡区石桥铺地铁站附近' +
+            '</div>';
+
+        //创建检索信息窗口对象
+        var searchInfoWindow = null;
+        searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+            title: "百度大厦",      //标题
+            width: 290,             //宽度
+            height: 105,              //高度
+            panel: "panel",         //检索结果面板
+            enableAutoPan: true,     //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH,   //周边检索
+                BMAPLIB_TAB_TO_HERE,  //到这里去
+                BMAPLIB_TAB_FROM_HERE //从这里出发
+            ]
+        });
+        var marker = new BMap.Marker(poi); //创建marker对象
+        // marker.enableDragging(); //marker可拖拽
+        marker.addEventListener("click", function (e) {
+            searchInfoWindow.open(marker);
+        })
+        map.addOverlay(marker); //在地图中添加marker
+        //样式1
+        var searchInfoWindow1 = new BMapLib.SearchInfoWindow(map, "信息框1内容", {
+            title: "信息框1", //标题
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_FROM_HERE, //从这里出发
+                BMAPLIB_TAB_SEARCH   //周边检索
+            ]
+        });
+        function openInfoWindow1() {
+            searchInfoWindow1.open(new BMap.Point(116.319852, 40.057031));
+        }
+        //样式2
+        var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, "信息框2内容", {
+            title: "信息框2", //标题
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+                BMAPLIB_TAB_SEARCH   //周边检索
+            ]
+        });
+        function openInfoWindow2() {
+            searchInfoWindow2.open(new BMap.Point(116.324852, 40.057031));
+        }
+        //样式3
+        var searchInfoWindow3 = new BMapLib.SearchInfoWindow(map, "信息框3内容", {
+            title: "信息框3", //标题
+            width: 290, //宽度
+            height: 40, //高度
+            panel: "panel", //检索结果面板
+            enableAutoPan: true, //自动平移
+            searchTypes: [
+            ]
+        });
+        function openInfoWindow3() {
+            searchInfoWindow3.open(new BMap.Point(106.491281, 29.537841));
+        }
+    </script>
+    <script>
+        var btns = document.getElementsByTagName("button");
+        var box = document.getElementsByClassName("box")[0];
+        var banner=document.getElementsByClassName("banner")[0];
+        var lis = banner.getElementsByTagName("li");
+        var j = 0;
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                if (this.className == "b2") {
+                    j++;
+                    if (j == 3) {
+                        j = 0;
+                    }
+                    lb();
+                } else if (this.className == "b1") {
+                    j--;
+                    if (j == -1) {
+                        j = 2;
+                    }
+                    lb();
+                }
+            }
+        }
+
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onclick = function () {
+                j = this.getAttribute("dy");
+                lb();
+            }
+        }
+        function lb() {
+            box.style.marginLeft = -100 * j + "%";
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].className = "";
+            }
+            lis[j].className = "active";
+        }
+        timer=setInterval(function(){
+            if (this.className = "b2") {
+                    j++;
+                    if (j == 3) {
+                        j = 0;
+                    }
+                    lb();}
+        },2000); /定时时间/
+        banner.onmouseover=function(){
+            clearInterval(timer);
+        }
+        banner.onmouseout=function(){
+                timer=setInterval(function(){
+                if (this.className = "b2") {
+                j++;
+                if (j == 3) {
+                    j = 0;
+                }
+                lb();}  
+            },1500); /定时时间/
+        }
+    </script>
+</body>
+
+</html>
